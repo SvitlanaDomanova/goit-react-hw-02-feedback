@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import Notification from 'components/Notification/Notification';
-const Statistscs = ({
+
+const Statistics = ({
   good,
   neutral,
   bad,
@@ -24,4 +26,13 @@ const Statistscs = ({
     </>
   );
 };
-export default Statistscs;
+Statistics.propTypes = {
+  title: PropTypes.string,
+  good: PropTypes.number,
+  neutral: PropTypes.number,
+  bad: PropTypes.number,
+  total: PropTypes.number,
+  positivePercentage: PropTypes.string,
+}
+export default Statistics;
+
